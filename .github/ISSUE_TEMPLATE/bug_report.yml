@@ -1,0 +1,79 @@
+name: Bug Report
+description: Report a bug in Disable Fog.
+labels: "bug"
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Before submitting, please make sure:
+        - You are using the **latest version** of Disable Fog
+        - You have searched existing issues to avoid duplicates
+
+  - type: dropdown
+    id: modloader
+    attributes:
+      label: Mod Loader
+      options:
+        - Fabric
+        - NeoForge
+        - Forge
+    validations:
+      required: true
+
+  - type: input
+    id: mc-version
+    attributes:
+      label: Minecraft Version
+      placeholder: "e.g. 1.21.1"
+    validations:
+      required: true
+
+  - type: input
+    id: mod-version
+    attributes:
+      label: Disable Fog Version
+      placeholder: "e.g. 2.1.1"
+    validations:
+      required: true
+
+  - type: input
+    id: modloader-version
+    attributes:
+      label: Mod Loader Version
+      placeholder: "e.g. Fabric: 0.19.2 / NeoForge 21.1.228 / Forge 52.1.14"
+    validations:
+      required: true
+
+  - type: input
+    id: log
+    attributes:
+      label: Latest Log
+      description: |
+        Upload `latest.log` from `.minecraft/logs` to [mclo.gs](https://mclo.gs/) or [gist.github.com](https://gist.github.com/) and paste the link here.
+      placeholder: "https://mclo.gs/..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      placeholder: A clear description of the bug.
+    validations:
+      required: true
+ 
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1.
+        2.
+        3.
+ 
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Information
+      placeholder: Any other relevant information.
